@@ -5,6 +5,6 @@ ADD . /app
 
 RUN npm install
 
-VOLUME /app
+VOLUME /logs
 
 CMD npm run wdio
