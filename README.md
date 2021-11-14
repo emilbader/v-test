@@ -29,3 +29,5 @@ The Docker compose file sets up a Selenium Grid hub and two Google Chrome nodes.
 ## Running it all in a Dockerized environment
 
 I would like to get this wokring by also running the tests in a Dockerized environment. I have currently commented out the "Webdriverio" serivce in `docker-compose.yml`. Building and running it gives an error saying it can't connect to the Selenium Grid.
+
+_note_: to build the `webdriverio` service with docker-compose, run `docker-compose up --build`
