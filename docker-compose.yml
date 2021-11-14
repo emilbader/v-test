@@ -1,16 +1,16 @@
 version: '3'
 
 services:
-  # webdriverio:
-  #   build: .
-  #   depends_on:
-  #     - chrome
-  #     - selenium-hub
-  #   volumes:
-  #    - ./app:/app
-  #   environment:
-  #   - HUB_PORT_4444_TCP_ADDR=selenium-hub
-  #    - HUB_PORT_4444_TCP_PORT=4444
+  webdriverio:
+    build: .
+    depends_on:
+      - chrome
+      - selenium-hub
+    #   volumes:
+    #    - ./app:/app
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=selenium-hub
+        - HUB_PORT_4444_TCP_PORT=4444
 
   chrome:
     image: selenium/node-chrome:4.1.0-prerelease-20211105
