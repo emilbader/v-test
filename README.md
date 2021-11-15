@@ -4,7 +4,7 @@
 
 - [x] Setup the solution with its Dockerized image.
 - [x] Parallel execution of tests (by adjusting `maxInstances` in `wdio.conf.ts`)
-- [ ] Reporting of the results
+- [x] Reporting of the results
 - [ ] Documentation
 
 ## Setup
