@@ -7,7 +7,7 @@ services:
       - chrome
       - selenium-hub
     volumes:
-      - ./logs:/logs
+      - ./logs:/app/logs
     environment:
       - DOCKER=true
       - USE_GRID=true

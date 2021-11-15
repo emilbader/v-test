@@ -151,7 +151,7 @@ export const config: WebdriverIO.Config = {
     [
       'json',
       {
-        outputDir: './logs',
+        outputDir: `${process.cwd()}/logs`,
         outputFileFormat: (opts) => {
           return `result-${opts.cid}.json`;
         },
