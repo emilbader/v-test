@@ -9,8 +9,8 @@ services:
     volumes:
       - ./logs:/logs
     environment:
-      - HUB_PORT_4444_TCP_ADDR=selenium-hub
-      - HUB_PORT_4444_TCP_PORT=4444
+      - DOCKER=true
+      - USE_GRID=true
 
   chrome:
     image: selenium/node-chrome:4.1.0-prerelease-20211105
@@ -23,6 +23,7 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_MAX_SESSIONS=2
       - SCREEN_WIDTH=1920
       - SCREEN_HEIGHT=1080
     #ports:

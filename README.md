@@ -2,10 +2,10 @@
 
 ## TODO's
 
-1. Setup the solution with its Dockerized image.
-1. Parallel execution of tests
-1. Reporting of the results
-1. Documentation
+- [x] Setup the solution with its Dockerized image.
+- [x] Parallel execution of tests (by adjusting `maxInstances` in `wdio.conf.ts`)
+- [ ] Reporting of the results
+- [ ] Documentation
 
 ## Setup
 
@@ -14,20 +14,18 @@
 
 ## Running it locally
 
-1. Make sure `serivces: ['chromedriver']` is uncommented in `wdio.conf.ts`.
-1. `npm run wdio`
+1. Run `npm run wdio`
 1. This will start a Google Chrome browser and execute tests
 
 ## Running it locally against Selenium Grid
 
-The Docker compose file sets up a Selenium Grid hub and two Google Chrome nodes.
+Starta Selenium Grid hub and two Google Chrome nodes.
 
-1. `docker-compose up`
-1. Comment out `serivces: ['chromedriver']` is uncommented in `wdio.conf.ts`.
-1. Once it's up (you can check this by going to http://localhost:4444), execute tests by running `npm run wdio`.
+1. `docker-compose up selenium-hub chrome`
+1. Once it's up (you can check this by going to http://localhost:4444), execute tests by running `USE_GRID=true npm run wdio`.
 
 ## Running it all in a Dockerized environment
 
-I would like to get this wokring by also running the tests in a Dockerized environment. I have currently commented out the "Webdriverio" serivce in `docker-compose.yml`. Building and running it gives an error saying it can't connect to the Selenium Grid.
+If you run this for the first time, you need to build the "webdriverio" service image by running `docker-compose up --build`. This will build the "webdriverio" service and start executing tests, all in a Dockerized environment.
 
-_note_: to build the `webdriverio` service with docker-compose, run `docker-compose up --build`
+Shut down all services by running `docker-compose down`.
