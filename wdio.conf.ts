@@ -21,7 +21,7 @@ export const config: WebdriverIO.Config = {
   // will be called from there.
   //
 
-  hostname: '127.0.0.1',
+  hostname: 'selenium-hub',
   port: 4444,
   path: '/',
   specs: ['./test/specs/**/*.ts'],
